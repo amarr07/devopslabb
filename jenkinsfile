@@ -1,0 +1,22 @@
+#install jenkin file
+#go to localhost:8080
+#create jenkinsfile in root directory 
+pipeline {
+agent any
+
+stages {
+stage ('Checkout') {
+steps {
+
+git branch: 'main', url: 'https://github.com/your-repo/your-python-project'
+}
+}
+stage('Run Tests') {
+steps {
+
+sh 'pythons test.py'
+}
+}
+}
+}
+#everytime u commit the output of the file will come to the console else build failure message 

@@ -26,3 +26,7 @@ COPY app.java .
 RUN javac app.java
 EXPOSE 8080
 CMD [ "java","app" ]
+
+git config --global user.name ""
+git config --global user.email ""
+
